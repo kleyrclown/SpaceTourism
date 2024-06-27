@@ -1,0 +1,406 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: url('home/background-home-desktop.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100%;
+}
+
+/* NAVBAR */
+
+.navbarHeader {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    height: 6em;
+    width: 100%;
+    gap: 2em;
+    margin-top: 30px;
+}
+
+.navbarLogo {
+    margin-left: 4em;
+}
+
+.navbarLine {
+    position: relative;
+    content: '';
+    background-color: rgba(240, 240, 240, 0.2);
+    width: 100%;
+    left: 3em;
+    height: 2px;
+    z-index: 1;
+}
+
+.navbarBtnContainer {
+    position: relative;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(10px);
+    background-color: rgba(36, 36, 36, 0.3);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1em 0 5rem;
+    gap: 3em;
+    text-decoration: none;
+    list-style-type: none;
+    white-space: nowrap;
+    z-index: 9998;
+}
+
+span {
+    font-weight: bold;
+}
+
+.navbarBtnContainer a {
+    font-size: 16px;
+    position: relative;
+    white-space: nowrap;
+}
+
+.navbarIcons {
+    font-size: 40px;
+    cursor: pointer;
+    display: none;
+    right: 0;
+    margin-left: auto;
+}
+
+#menu-icon {
+    color: rgb(240, 240, 240);
+}
+
+#close-icon {
+    color: rgba(36, 36, 36);
+}
+
+#check {
+    display: none;
+}
+
+/* NAVBAR BUTTON LINE BELOW */
+
+.btnActive, .btnToHover {
+    text-decoration: none;
+    color: rgb(240, 240, 240);
+    position: relative;
+}
+
+.btnActive::after {
+    position: absolute;
+    content: "";
+    bottom: -35px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: white;
+    transition: 0.6s ease;
+}
+
+.btnToHover::after {
+    position: absolute;
+    content: "";
+    bottom: -35px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: white;
+    transition: 0.6s ease;
+    opacity: 0;
+}
+
+.btnToHover:hover::after {
+    opacity: 1;
+}
+
+/* MAIN BODY */
+
+.homeBody {
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+    margin: auto;
+    width: 100%;
+    padding-top: 15em;
+    max-width: 1200px;
+}
+
+.leftBody {
+    display: flex;
+    flex-direction: column;
+    user-select: none;
+    width: 50%;
+    gap: 3em;
+}
+
+.leftTopText {
+    font-size: 30px;
+}
+
+.theSpace h1{
+    font-size: 8em;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.leftBodyParagraph p{
+    width: 100%;
+    line-height: 30px;
+}
+
+/* RIGHT BUTTON */
+
+.rightButton {
+    position: relative;
+    border-radius: 100%;
+    padding: 3em 2em;
+    background: rgb(240, 240, 240);
+    text-decoration: none;
+    color: black;
+    font-size: 2.5em;
+    transition: 0.3s ease;
+    z-index: 888;
+}
+
+.rightButton::after {
+    position: absolute;
+    content: "";
+    top: -68px;
+    left: -65px; 
+    border-radius: 100%;
+    padding: 5.5em 5.5em;
+    background: rgb(240, 240, 240, 0.1);
+    transition: 0.3s ease;
+    opacity: 0;
+    z-index: 1;
+}
+
+.rightButton:hover:after {
+    opacity: 1;
+}
+
+@media screen and (max-width:992px) {
+
+    body {
+        background-image: url('home/background-home-tablet.jpg');
+    }
+
+    /* NAVBAR */
+
+    .navbarHeader {
+        position: relative;
+        align-items: center;
+        justify-content: flex-end;
+        margin-top: 0px;
+        gap: 3em;
+    }
+
+    .navbarLogo {
+        width: 4rem;
+        margin-left: 40px;
+    }   
+
+    .navbarBtnContainer {
+        justify-content: space-evenly;
+        gap: 0;
+        background-color: rgba(36, 36, 36, 0.6);
+        padding: 0 0 0 0;
+    }
+
+    .navbarBtnContainer a {
+        font-size: 15px;
+    }
+
+    .navbarLine {
+        display: none;
+    }
+
+    .btnActive, .btnToHover {
+        text-decoration: none;
+        color: rgb(240, 240, 240);
+        position: relative;
+    }
+    .btnActive::after {
+        position: absolute;
+        content: "";
+        bottom: -35px;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background-color: white;
+        transition: 0.6s ease;
+    }
+
+    .btnToHover::after {
+        position: absolute;
+        content: "";
+        bottom: -35px;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background-color: white;
+        transition: 0.6s ease;
+        opacity: 0;
+    }
+    
+    .btnToHover:hover::after {
+        opacity: 1;
+    }
+
+    /* BODY */
+
+    .homeBody {
+        padding-top: 5em;
+        flex-direction: column;
+        width: 100%;
+        gap: 12em;
+    }
+
+    .leftBody {
+        display: flex;
+        text-align: center;
+        user-select: none;
+        gap: 3em;
+        width: 85%;
+    }
+
+    .leftBodyParagraph {
+        width: 100%;
+    }
+
+    /* EXPLORE BUTTON */
+    .rightButton {
+        font-size: 2.5em;
+    }
+}
+
+@media screen and (max-width:480px) {
+
+    body {
+        background-image: url('home/background-home-mobile.jpg');
+    }
+
+    /* NAVBAR */
+
+    .navbarContainer {
+        padding: 1em;
+    }
+
+    .navbarLogo {
+        width: 3em;
+        margin-left: 30px;
+    }
+
+    .navbarIcons {
+        display: inline-flex;
+        margin-right: 40px;
+    }
+
+    #close-icon {
+        display: none;
+    }
+
+    #check:checked ~ .navbarIcons #close-icon {
+        display: block;
+        color: rgb(240, 240, 240);
+        z-index: 9999;
+    }
+
+    #check:checked ~ .navbarIcons #menu-icon {
+        display: none;
+    }
+
+    .navbarBtnContainer {
+        position: absolute;
+        display: flex;
+        align-items: normal;
+        text-align: left;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 0 25em 1em;
+        gap: 3em;
+        top: 0%;
+        right: 0;
+        width: 0;
+        overflow: hidden;
+        height: 60rem;
+        backdrop-filter: blur(10px);
+        background: rgba(36, 36, 36, 0.2);
+        transition: .3s ease;
+        opacity: 0;
+    }
+
+    #check:checked ~ .navbarBtnContainer {
+        width: 60%;
+        opacity: 1;
+    }
+
+    .navbarBtnContainer a {
+        font-size: 25px;
+        display: block;
+        position: relative;
+        color: rgb(240, 240, 240);
+    }
+
+    .btnActive::after {
+        bottom: 0px;
+        left: 250px;
+        width: 10px;
+        height: 100%;
+    }
+
+    .btnToHover::after {
+        bottom: 0px;
+        left: 250px;
+        width: 10px;
+        height: 100%;
+        opacity: 0;
+    }
+    
+    .btnToHover:hover::after {
+        opacity: 1;
+    }
+
+    /* BODY */
+    .homeBody {
+        margin: 0 0 0 0;
+    }
+
+    /* LEFT BODY */
+
+    .theSpace h1 {
+        font-size: 4em;
+    }
+
+    .leftBodyParagraph p {
+        width: auto;
+        padding: 0 1em;
+    }
+
+    /* RIGHT BODY */
+
+    .rightButton {
+        font-size: 1.5em;
+    }
+
+    .rightButton::after {
+        padding: 6em 6em;
+        top: -53px;
+        left: -53px; 
+    }
+}
