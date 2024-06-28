@@ -1,3 +1,5 @@
+// FETCH DATA FROM "data.json" FOR BUTTON FUNCTIONALITY
+
 document.addEventListener('DOMContentLoaded', () => {
   fetch('data.json')
     .then(response => response.json())
@@ -30,4 +32,20 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     })
     .catch(error => console.error('Error fetching data:', error));
+});
+
+// BUTTONS WILL STAY HIGHLIGHTED WHEN CLICKED
+
+document.addEventListener('DOMContentLoaded', () => {
+    const buttons = document.querySelectorAll('.moonBtns');
+
+    buttons.forEach(button => {
+        button.addEventListener('click', function(prevent) {
+            prevent.preventDefault();
+
+            buttons.forEach(btn => btn.classList.remove('active'));
+
+            this.classList.add('active');
+        });
+    });
 });

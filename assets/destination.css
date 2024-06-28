@@ -136,6 +136,7 @@ span {
     align-items: center;
     color: white;
     margin: auto;
+    margin: 3.8em 0 0 0;
     gap: 1em;
     width: 100%;
 }
@@ -146,7 +147,7 @@ span {
     display: flex;
     flex-direction: column;
     user-select: none;
-    gap: 8em;
+    gap: 4em;
 }
 
 .TopText {
@@ -178,23 +179,6 @@ span {
     gap: 2em;
 }
 
-/* .moonActiveBtn {
-    font-size: 1.2em;
-    color: rgb(240, 240, 240);
-    text-decoration: none;
-    position: relative;
-}
-
-.moonActiveBtn::after {
-    position: absolute;
-    content: "";
-    bottom: -5px;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background-color: white;
-    transition: 0.6s ease;
-} */
 
 .moonBtns {
     font-size: 1.2em;
@@ -219,9 +203,12 @@ span {
     opacity: 1;
 }
 
+.moonBtns.active::after {
+    opacity: 1;
+}
+
 .rightBodyTitle {
     font-size: 8em;
-    font-family: 'Times New Roman', Times, serif;
 }
 
 .rightBodyFooter {
@@ -231,6 +218,15 @@ span {
 
 .rightBodyFooter p {
     font-size: 2em;
+}
+
+.lineSeparator {
+    position: relative;
+    content: '';
+    background-color: rgba(240, 240, 240, 0.2);
+    width: 100%;
+    height: 2px;
+    z-index: 1;
 }
 
 @media screen and (max-width:992px) {
@@ -304,7 +300,6 @@ span {
     /* BODY */
 
     .homeBody {
-        padding-top: 5em;
         flex-direction: column;
         width: 100%;
         gap: 5em;
@@ -347,6 +342,9 @@ span {
         width: 80%;
     }
 
+    .lineSeparator {
+        width: 80%;
+    }
 }
 
 @media screen and (max-width:480px) {
@@ -438,7 +436,7 @@ span {
 
     /* BODY */
     .homeBody {
-        margin: 0 0 0 0;
+        margin: 1em 0 0 0;
     }
 
     .TopText {
@@ -446,7 +444,21 @@ span {
         text-align: center;
     }
 
+    /* LEFT BODY */
+
+    .leftBody {
+        gap: 2em;
+    }
+
+    .moonImg {
+        width: 15em;
+    }
+
     /* RIGHT BODY */
+
+    .rightBodyTitle {
+        font-size: 4em;
+    }
 
     .rightBodyFooter {
         gap: 2em;

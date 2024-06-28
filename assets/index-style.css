@@ -146,7 +146,6 @@ span {
     flex-direction: column;
     user-select: none;
     width: 50%;
-    gap: 3em;
 }
 
 .leftTopText {
@@ -155,7 +154,6 @@ span {
 
 .theSpace h1{
     font-size: 8em;
-    font-family: 'Times New Roman', Times, serif;
 }
 
 .leftBodyParagraph p{
@@ -277,6 +275,10 @@ span {
         user-select: none;
         gap: 3em;
         width: 85%;
+    }
+
+    .theSpace h1{
+        font-size: 7em;
     }
 
     .leftBodyParagraph {
