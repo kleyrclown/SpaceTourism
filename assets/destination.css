@@ -155,6 +155,10 @@ span {
     font-size: 30px;
 }
 
+.toFadeText {
+    opacity: 0.3;
+}
+
 .theMoon {
     display: flex;
     justify-content: center;

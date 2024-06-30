@@ -29,3 +29,17 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .catch(error => console.error('Error fetching data:', error));
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const buttons = document.querySelectorAll('.selectionBtns');
+
+        buttons.forEach(button => {
+            button.addEventListener('click', function(prevent) {
+                prevent.preventDefault();
+
+                buttons.forEach(btn => btn.classList.remove('active'));
+
+                this.classList.add('active');
+            });
+        });
+});

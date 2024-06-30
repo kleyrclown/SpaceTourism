@@ -155,6 +155,10 @@ span {
     margin: 2em 0em 2em 5em;
 }
 
+.toFadeText {
+    opacity: 0.3;
+}
+
 /* MAIN CONTENT TITLE */
 
 .technologyTitle {
