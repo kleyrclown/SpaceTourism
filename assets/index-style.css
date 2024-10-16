@@ -192,6 +192,27 @@ span {
     opacity: 1;
 }
 
+/* CREDITS */
+
+.lowerCredits {
+    position: relative;
+    top: 180px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lowerCredits p {
+    color: white;
+    font-size: 15px;
+}
+
+.lowerCredits a {
+    text-decoration: underline;
+    color: rgb(151, 151, 255);
+}
+
 @media screen and (max-width:992px) {
 
     body {
@@ -288,6 +309,14 @@ span {
     /* EXPLORE BUTTON */
     .rightButton {
         font-size: 2.5em;
+    }
+
+    .lowerCredits {
+        top: 150px;
+    }
+    
+    .lowerCredits p {
+        font-size: 18px;
     }
 }
 
@@ -404,5 +433,13 @@ span {
         padding: 6em 6em;
         top: -53px;
         left: -53px; 
+    }
+
+    .lowerCredits {
+        top: 140px;
+    }
+    
+    .lowerCredits p {
+        font-size: 14px;
     }
 }
